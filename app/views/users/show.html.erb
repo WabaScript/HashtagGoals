@@ -1,0 +1,15 @@
+
+<h1>Show page User</h1>
+
+<% if flash[:success] %>
+    <h2> <%= flash[:success] %> </h2>
+<% end %>
+
+<h1> Name : <%= @user.name %> </h1>
+<h1> Password : <%= @user.password %> </h1>
+<h1> Email : <%= @user.email %> </h1><br>
+<h1> Location : <%= @user.location %> </h1><br>
+
+<%= button_to "Delete", user_path(@user), method: :delete %>
+<%= link_to 'Go main page', new_user_path %> <br>
+
