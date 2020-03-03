@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_03_155028) do
+ActiveRecord::Schema.define(version: 2020_03_03_185958) do
 
   create_table "follow_goals", force: :cascade do |t|
     t.integer "follower_id"
@@ -20,12 +20,13 @@ ActiveRecord::Schema.define(version: 2020_03_03_155028) do
   end
 
   create_table "goals", force: :cascade do |t|
-    t.string "name"
+    t.string "title"
     t.integer "owner_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "description"
-    t.date "timeline"
+    t.date "start_date"
+    t.date "end_date"
   end
 
   create_table "posts", force: :cascade do |t|
