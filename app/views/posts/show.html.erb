@@ -1,0 +1,15 @@
+
+<h1>Show page Post </h1>
+
+<% if flash[:success] %>
+    <h2> <%= flash[:success] %> </h2>
+<% end %>
+
+<h1> Name : <%= @post.name %> </h1>
+<h1> Password : <%= @post.password %> </h1>
+<h1> Email : <%= @post.email %> </h1><br>
+<h1> Location : <%= @post.location %> </h1><br>
+
+<%= button_to "Delete", post_path(@post), method: :delete %>
+<%= link_to 'Go main page', new_post_path %> <br>
+

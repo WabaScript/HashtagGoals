@@ -1,3 +1,4 @@
+
 <h1>Show page User</h1>
 
 <% if flash[:success] %>
@@ -10,4 +11,6 @@
 <h1> Location : <%= @user.location %> </h1><br>
 
 <%= button_to "Delete", user_path(@user), method: :delete %>
+
 <%= link_to 'Go main page', new_user_path %> <br>
+
