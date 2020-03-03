@@ -1,0 +1,15 @@
+<h1>Follow Goal Page</h1>
+
+<% if flash[:errors] %>
+<% flash[:errors].each do |e| %>
+<%= e %>
+<% end %>
+<% end %>
+
+<%= form_for @fg do |f| %>
+<%= f.label :follower_id, "Follower" %>
+<%= collection_select(:follow_goal, :follower_id, User.all, :id, :name) %>
+<%= f.label :goal_id, "Goal" %>
+<%= collection_select(:follow_goal, :goal_id, Goal.all, :id, :title) %>
+<%= f.submit %>
+<% end %>
