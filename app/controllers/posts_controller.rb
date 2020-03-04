@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
-    before_action :find_user, only: [:show, :edit, :update, :destroy]
-  
+    # before_action :find_user, only: [:show, :edit, :update]
+    before_action :find_post, only: [:show, :edit, :update, :destroy]
+
     def index 
     # #   @posts = Post.all
     #   # render :index
@@ -49,13 +50,13 @@ class PostsController < ApplicationController
     def destroy 
       # @post = Post.find(params[:id])
       @post.destroy 
-      redirect_to posts_path
+      redirect_to goals_path
     end 
   
     private 
   
     def post_params 
-      params.require(:post).permit(:user_id, :goal_id, :content)
+      params.require(:post).permit(:user_id, :goal_id, :content, :img_url)
     end 
   
     def find_post

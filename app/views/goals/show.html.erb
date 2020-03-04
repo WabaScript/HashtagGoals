@@ -3,12 +3,16 @@
 
 <p> Description:<%= @goal.description %>
 <p> Start Date:<%= @goal.start_date %> 
-<p> End Date: <%= @goal.end_date %><br/>
+<p> End Date: <%= @goal.end_date %>
 <br>
 <h3>Posts Section:</h3>
 <p> <% @posts.each do |p| %>
 <p> Name: <%= link_to  p.user.name, p.user %> : <%= p.content %>
-    
+<p> <%= image_tag "#{p.img_url}" %>
+<% if current_user.id == p.user_id %>
+  <%= button_to 'Delete this comment', post_path(p), method: :delete, data: { confirm: 'are u sure lol' } %>
+  
+<% end %>
     <% end %>
 <p>
 
@@ -19,6 +23,14 @@
 <% end %>
 
 
+<%= form_for @post do |f| %>
+<%= f.hidden_field :goal_id, value: @goal.id %>
+<%= f.hidden_field :user_id, value: current_user.id %>
+<%= f.label :content, "Write a comment:" %>
+<%= f.text_field :content %>
+<%= f.label :img_url, "image url:" %>
+<%= f.text_field :img_url %>
+<%= f.submit "Create Post"%>
+<% end %>
 
 
-<%= link_to  "Home", goals_path %>
