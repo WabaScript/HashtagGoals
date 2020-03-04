@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
 
+
   has_many :follow_goals, foreign_key: :follower_id
   has_many :followed_goals, through: :follow_goals
 

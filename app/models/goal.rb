@@ -6,8 +6,8 @@ class Goal < ApplicationRecord
 
     belongs_to :owner, :class_name => "User", foreign_key: :owner_id
 
-    validates :title, :description, :start_date, :end_date, presence: true
-    validates :title, length: { maximum: 100 }
+    validates :title, :description, presence: true
+    # validates :title, length: { maximum: 100 }
     # validate :expiration_date_cannot_be_in_the_past
 
 #   def expiration_date_cannot_be_in_the_past
