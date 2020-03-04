@@ -13,8 +13,10 @@
 <%= f.label :email, "Email" %>
 <%= f.text_field :email %>
 <%= f.label :password, "Password" %>
-<%= f.text_field :password %>
+<%= f.password_field :password %>
 <%= f.label :location, "Location" %>
 <%= f.text_field :location %>
 <%= f.submit %>
 <% end %>
+
+ <%= button_to 'Home', login_path %>

@@ -10,6 +10,7 @@ class GoalsController < ApplicationController
         @owner = @goal.owner
         @posts = @goal.posts
         @follow_goal = FollowGoal.new()
+        @post = Post.new()
 
         # @post_owner = User.find(@posts.user_id)
         #   User.find(Goal.second.posts.first.user_id)
