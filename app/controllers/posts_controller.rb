@@ -18,9 +18,10 @@ class PostsController < ApplicationController
     
     def create 
       @post = Post.create(post_params)
+      @goal = post_params[:goal_id]
     
       if @post.valid?
-        redirect_to  @post
+        redirect_to goal_path(@goal)
       else
         flash[:errors] = @post.errors.full_messages
         redirect_to new_post_path 
@@ -54,7 +55,7 @@ class PostsController < ApplicationController
     private 
   
     def post_params 
-      params.require(:post).permit(:user_id, :goal_id, :content, :img_url)
+      params.require(:post).permit(:user_id, :goal_id, :content)
     end 
   
     def find_post

@@ -1,5 +1,15 @@
 <h1><%= @goal.title %> </h1>
+<%= @owner.name %>
 
-<p> <%= @goal.description %>
-<%= @goal.start_date %>
-<%= @goal.end_date %>
+<p> Description:<%= @goal.description %>
+<p> Start Date:<%= @goal.start_date %> 
+<p> End Date: <%= @goal.end_date %><br/>
+<br>
+<h3>Posts Section:</h3>
+<p> <% @posts.each do |p| %>
+<p> Name: <%= link_to  p.user.name, p.user %> : <%= p.content %>
+    
+    <% end %>
+<p>
+<%= link_to  "Join This Goal!", new_follow_goal_path %><br/>
+<%= link_to  "Home", goals_path %>
