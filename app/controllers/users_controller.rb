@@ -7,6 +7,8 @@ class UsersController < ApplicationController
     # end 
   
     def show 
+      @goals = @user.goals
+      @followed_goals = @user.followed_goals
       # render :show
     end
     
@@ -18,7 +20,7 @@ class UsersController < ApplicationController
     
     def create 
       @user = User.create(user_params)
-    
+
       if @user.valid?
         redirect_to  @user
       else

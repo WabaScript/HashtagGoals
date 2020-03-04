@@ -16,4 +16,6 @@ class Goal < ApplicationRecord
 #     end
 #   end  
 
+
+
 end

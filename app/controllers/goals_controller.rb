@@ -6,6 +6,11 @@ class GoalsController < ApplicationController
     
       def show
         @goal = Goal.find(params[:id])
+        @owner = @goal.owner
+        @posts = @goal.posts
+
+        # @post_owner = User.find(@posts.user_id)
+        #   User.find(Goal.second.posts.first.user_id)
       end
 
     def new
@@ -25,13 +30,12 @@ class GoalsController < ApplicationController
     end
 
     def edit 
-        # @goal = Goal.find(params[:id])
-        # render :edit
+        @goal = Goal.find(params[:id])
+        render :edit
       end 
       
       def update
-        # @goal = Goal.find(params[:id])
-    
+        @goal = Goal.find(params[:id])
         if @goal.update(goal_params)
           redirect_to goal_path(@goal.id)
         else
@@ -46,7 +50,7 @@ class GoalsController < ApplicationController
         @goal.destroy 
         redirect_to goals_path
       end 
-    
+
 
     private
 

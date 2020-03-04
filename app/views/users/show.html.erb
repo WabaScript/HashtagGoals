@@ -10,6 +10,17 @@
 <h1> Email : <%= @user.email %> </h1><br>
 <h1> Location : <%= @user.location %> </h1><br>
 
+
+<h1>My Owned Goals</h1>
+<p><% @goals.each do |g| %>
+<%= link_to g.title, g %><br>
+<% end %>
+
+<h3>Goals I'm Following</h3>
+<p><% @followed_goals.each do |g| %>
+<%= link_to g.title, g %><br>
+<% end %>
+
 <%= button_to "Delete", user_path(@user), method: :delete %>
 
 <%= link_to 'Go main page', new_user_path %> <br>
