@@ -7,17 +7,15 @@
 <% end %>
 
 <%= form_for @goal do |f| %>
-<%# <%= f.hidden_field :owner_id, :value => @owner %>
-<%= f.label :owner_id, "owner id" %>
-<%= f.number_field :owner_id %>
+<%= f.hidden_field :owner_id, value: current_user.id %>
 <%= f.label :title, "Title" %>
 <%= f.text_field :title %>
 <%= f.label :description, "Description" %>
 <%= f.text_area :description %>
 <%= f.label :start_date, "Start Date" %>
-<%= f.datetime_field :start_date %>
+<%= f.text_field :start_date, data:{ provide:'datepicker' } %>
 <%= f.label :end_date, "End Date" %>
-<%= f.datetime_field :end_date %>
+<%= f.text_field :start_date, data:{ provide:'datepicker' } %>
 
 <%= f.submit %>
 <% end %>

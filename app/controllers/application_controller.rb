@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
     before_action :authorized #lock down this whole app
     helper_method :current_user #we can call current_user from a view
+    helper_method :logged_in?
     #
 
     def current_user

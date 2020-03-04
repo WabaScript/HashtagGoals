@@ -2,12 +2,14 @@ class GoalsController < ApplicationController
 
     def index
         @goals = Goal.all
+        @g = Goal.new
       end
     
       def show
         @goal = Goal.find(params[:id])
         @owner = @goal.owner
         @posts = @goal.posts
+        @follow_goal = FollowGoal.new()
 
         # @post_owner = User.find(@posts.user_id)
         #   User.find(Goal.second.posts.first.user_id)
