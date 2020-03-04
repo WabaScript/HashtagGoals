@@ -17,7 +17,7 @@
   </head>
 
   <body>
-    <%=   current_user ? button_to('home', '/users/2') : "Hi " %>
+    <%=   current_user ? button_to('home', goals_path, {:method => :get}) : "You must log-in! " %>
 
     <%= yield %>
   </body>

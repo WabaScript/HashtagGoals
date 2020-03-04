@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_03_04_144503) do
-=======
-ActiveRecord::Schema.define(version: 2020_03_04_144200) do
->>>>>>> master
 
   create_table "follow_goals", force: :cascade do |t|
     t.integer "follower_id"
