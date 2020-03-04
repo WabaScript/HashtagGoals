@@ -5,8 +5,15 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :destroy, :show]
   resources :goals
   resources :follow_goals
+<<<<<<< HEAD
 
   get '/login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'
 
+=======
+  
+  # login routes 
+  get '/login', to: 'sessions#new', as: 'login'
+  post '/login', to: 'sessions#create'
+>>>>>>> master
 end

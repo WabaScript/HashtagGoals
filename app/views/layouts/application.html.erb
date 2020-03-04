@@ -17,7 +17,8 @@
   </head>
 
   <body>
-    <%=   current_user ? button_to('home', '/users/2') : "hi" %>
+    <%=   current_user ? button_to('home', '/users/2') : "Hi " %>
+
     <%= yield %>
   </body>
 </html>
