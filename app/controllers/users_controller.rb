@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    skip_before_action :authorized, only: [:new, :create]
     before_action :find_user, only: [:show, :edit, :update, :destroy]
   
     # def index 
@@ -50,6 +51,8 @@ class UsersController < ApplicationController
     def destroy 
       # @user = user.find(params[:id])
       @user.destroy 
+      flash[:notice] = 'You deleted your account!'
+
       redirect_to users_path
     end 
   
