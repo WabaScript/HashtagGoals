@@ -17,7 +17,11 @@
   </head>
 
   <body>
-    <%=   current_user ? button_to('home', goals_path, {:method => :get}) : "You must log-in! " %>
+   
+    <%=  current_user ? button_to('logout', logout_path, method: :delete) : "Log-in! " %>
+    <%=  current_user ? button_to('home', goals_path, method: :get) : "Welcome" %>
+    <%=  current_user ? button_to('Profile', current_user, method: :get) : "Welcome" %>
+    
 
     <%= yield %>
   </body>

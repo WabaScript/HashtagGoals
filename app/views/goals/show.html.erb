@@ -1,5 +1,5 @@
 <h1><%= @goal.title %> </h1>
-<%= @owner.name %>
+<%= link_to  @owner.name, @owner %>
 
 <p> Description:<%= @goal.description %>
 <p> Start Date:<%= @goal.start_date %> 
@@ -11,5 +11,14 @@
     
     <% end %>
 <p>
-<%= link_to  "Join This Goal!", new_follow_goal_path %><br/>
+
+<%= form_for @follow_goal do |f| %>
+<%= f.hidden_field :goal_id, value: @goal.id %>
+<%= f.hidden_field :follower_id, value: current_user.id %>
+<%= f.submit "Follow this goal"%>
+<% end %>
+
+
+
+
 <%= link_to  "Home", goals_path %>

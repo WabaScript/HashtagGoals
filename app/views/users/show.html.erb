@@ -1,14 +1,14 @@
 
-<h1>Show page User</h1>
+<h1> <%=@user.name%></h1>
 
 <% if flash[:success] %>
     <h2> <%= flash[:success] %> </h2>
 <% end %>
 
-<h1> Name : <%= @user.name %> </h1>
-<h1> Password : <%= @user.password %> </h1>
-<h1> Email : <%= @user.email %> </h1><br>
-<h1> Location : <%= @user.location %> </h1><br>
+<p> Name : <%= @user.name %> 
+<p> Password : <%= @user.password %>
+<p> Email : <%= @user.email %> <br>
+<p> Location : <%= @user.location %> <br>
 
 
 <h1>My Owned Goals</h1>

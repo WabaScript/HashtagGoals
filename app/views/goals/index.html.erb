@@ -3,3 +3,7 @@
 <% @goals.each do |g| %>
 <%= link_to  g.title, g %><br/>
 <% end %>
+
+
+ 
+ <%= button_to('Create a Goal!', new_goal_path, method: :get) %>
