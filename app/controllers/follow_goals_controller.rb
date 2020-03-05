@@ -1,5 +1,4 @@
 class FollowGoalsController < ApplicationController
-    helper_method :current_user 
 
     def new
         @fg = FollowGoal.new
@@ -10,7 +9,7 @@ class FollowGoalsController < ApplicationController
         @fg = FollowGoal.create(fg_params)
         @goal = fg_params[:goal_id]
         if @fg.valid?
-            redirect_to current_user
+            redirect_to goal_path(@goal)
 
         else
             flash[:errors] = @fg.errors.full_messages
