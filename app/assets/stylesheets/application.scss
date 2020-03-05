@@ -24,14 +24,14 @@
     object-fit: cover;
     top: 0;
     z-index: -2;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    
    }
    
    
    .home-video-wrapper {
-   height:100vh;
+   background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
    }
 
    .goal_video {
@@ -41,14 +41,13 @@
     object-fit: cover;
     top: 0;
     z-index: -2;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
    }
    
    
    .goal-video-wrapper {
-   height:100vh;
+   background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
    }
 
    .welcome-class {

@@ -17,12 +17,20 @@
   </head>
 
   <body>
-   
-    <%=  current_user ? button_to('logout', logout_path, method: :delete) : '' %>
-    <%=  current_user ? button_to('home', goals_path, method: :get) : '' %>
-    <%=  current_user ? button_to('Profile', current_user, method: :get) : '' %>
-    
+   <nav class="nav nav-pills mb-3">
+      <div class="nav-item">
+        <%=  current_user ? button_to('logout', logout_path, method: :delete, class: "nav-item nav-link active") : '' %>
+      </div>
 
+      <div class="nav-item">
+        <%=  current_user ? button_to('home', goals_path, method: :get, class: "nav-item nav-link") : '' %>
+      </div>
+
+      <div class="nav-item">
+        <%=  current_user ? button_to('Profile', current_user, method: :get, class: "nav-item nav-link active") : '' %>
+      </div>
+
+    </nav>
     <%= yield %>
   </body>
 </html>
