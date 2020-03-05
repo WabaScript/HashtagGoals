@@ -3,3 +3,12 @@
 //= link PexelsVideos1550080.mp4
 //= link coolbeach.mp4
 //= link GlowingFall.webm
+//= link blueGlowingFall.webm
+//= link GreenGlowingFall.webm
+//= link purpleGlowingFall.webm
+//= link redGlowingFall.webm
+//= link bopolygon.webm
+//= link rbpolygon.webm
+//= link bppolygon.webm
+//= link ygpolygon.webm
+//= link rtpolygon.webm
