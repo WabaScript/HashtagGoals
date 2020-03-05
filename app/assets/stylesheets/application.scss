@@ -17,3 +17,36 @@
  // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";  
 
+.home_video {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    z-index: -2;
+   }
+   
+   
+   .home-video-wrapper {
+   height:100vh;
+   }
+
+   .goal_video {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    z-index: -2;
+   }
+   
+   
+   .goal-video-wrapper {
+   height:100vh;
+   }
+
+   .welcome-class {
+       
+       color: cyan;
+   }
+

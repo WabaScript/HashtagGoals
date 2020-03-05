@@ -29,6 +29,8 @@ gem 'jquery-rails'
 gem 'faker'
 # Boot strap datepicker
 gem 'bootstrap-datepicker-rails'
+#Sprockets
+gem 'sprockets-rails', '3.2.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
