@@ -11,8 +11,8 @@
     <br>
     <h3>Posts Section:</h3>
     <p> <% @posts.each do |p| %>
-    <p> Name: <%= link_to  p.user.name, p.user %> : <%= p.content %>
-    <p> <%= image_tag "#{p.img_url}" %>
+    <%= link_to  p.user.name, p.user %>: <%= p.content %>
+    <%= image_tag "#{p.img_url}" %><br>
     <% if current_user.id == p.user_id %>
       <%= button_to 'Delete this comment', post_path(p), method: :delete, data: { confirm: 'are u sure lol' } %>
       
