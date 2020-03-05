@@ -1,5 +1,4 @@
 class FollowGoalsController < ApplicationController
-    helper_method :current_user 
 
     def new
         @fg = FollowGoal.new
