@@ -54,4 +54,81 @@
        
        color: cyan;
    }
+   nav{
+       background-color: purple;
+   }
+   
+   .login{
+    font-size: 1.2em;
+    font-weight: bold;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 100%;
+    height: 100%;
+
+
+   }
+   .login-div{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    width: 100%;
+    height: 100%;
+   }
+
+   .login-name-label{
+       right: 400px;
+   }
+
+   .center-div{
+    position: fixed; /* or absolute */
+    height: 80%;
+    width: 40%;
+    left: 30%;
+    background-color: wheat;
+    padding-left: 7%;
+    padding-top: 5%;
+    // margin: 5%;
+   }
+   .center-div-edit{
+    position: fixed; /* or absolute */
+    height: 50%;
+    width: 60%;
+    left: 30%;
+    background-color: wheat;
+    padding-left: 7%;
+    padding-top: 5%;
+    // margin: 5%;
+   }
+   
+   .backg{
+    // background: image-url('unsplash.jpg') no-repeat;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+   }
+   .goal-container {
+    width:100%;
+    text-align:center;
+}
+   .goal-div{
+       width: 30%;
+       height: 120px;
+       float:left; /* add this */
+       overflow: auto;
+       border: 1px solid red;
+       background-color: blue($color: #000000);
+       color: green;
+       margin: 20px;
+        font-size: 1.5em;
+       border-width: 5px;
+   }
+
+   .fixe-div{
+        display: inline-block;
+        margin:0 aut;
+        width: 80%;
+   }
+
 
