@@ -1,22 +1,22 @@
 <div class="home-video-wrapper">
   <%= video_tag "PexelsVideos1550080.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
 
-
-<h1>Login</h1>
-
-<h4><%= flash[:notice] %></h4>
-
-<!-- form will POST to '/login' -->
-<%= form_tag(login_path) do %>
-  <%= label_tag :name %>
-  <%= text_field_tag :name %>
-
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-
-  <%= submit_tag 'Login' %> <br>
-<% end %>  <br>
-
-<h3>New User, <%= link_to "please register", new_user_path %> </h3>
-
-</div>
+  <div class="login">
+        <div class="login-div">
+          <h4><%= flash[:notice] %></h4>
+          <%= form_tag(login_path) do %>
+          
+              <%= label_tag :name %>
+              <%= text_field_tag :name %>
+              
+              <%= label_tag :password %>
+              <%= password_field_tag :password %>
+        <div>
+      <%= submit_tag 'Login' %> <br>
+    </div>
+            <% end %> 
+          <h3>New User, <%= link_to "please register", new_user_path %> </h3>
+          
+  </div>
+  </div>
+  </div>

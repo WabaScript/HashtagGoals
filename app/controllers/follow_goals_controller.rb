@@ -17,6 +17,14 @@ class FollowGoalsController < ApplicationController
         end
     end
 
+    # def destroy 
+    #     @fg = FollowGoal.find_by(follower_id: current_user.id)
+    #     @fg.destroy 
+    #     flash[:notice] = 'You unfollowed this goal!'
+  
+    #     redirect_to goals_path
+    #   end 
+
     def fg_params
         params.require(:follow_goal).permit(:follower_id, :goal_id)
     end
