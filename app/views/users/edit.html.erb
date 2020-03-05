@@ -1,3 +1,6 @@
+<div class="goal-video-wrapper">
+  <%= video_tag random_glow_video, autoplay: :autoplay, loop: :loop, mute: :mute, class: "goal_video" %>
+
 <h1>Welcome to Edit a User page!</h1>
 
 <% if flash[:errors] %>
@@ -19,3 +22,5 @@
 <% end %>
 
   <%=  current_user ? button_to('Go Back', current_user, method: :get) : '' %>
+
+  </div>
