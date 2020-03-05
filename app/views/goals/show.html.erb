@@ -22,7 +22,7 @@
 <%= f.submit "Follow this goal"%>
 <% end %>
 
-
+<% if @goal.follow_to_post_arr.include? (current_user.id) %>
 <%= form_for @post do |f| %>
 <%= f.hidden_field :goal_id, value: @goal.id %>
 <%= f.hidden_field :user_id, value: current_user.id %>
@@ -31,6 +31,7 @@
 <%= f.label :img_url, "image url:" %>
 <%= f.text_field :img_url %>
 <%= f.submit "Create Post"%>
+<% end %>
 <% end %>
 
 

@@ -16,6 +16,13 @@ class Goal < ApplicationRecord
 #     end
 #   end  
 
+def follow_to_post_arr
+    arr =[]
+    self.follow_goals.each do |f|
+        arr << f.follower_id
+    end
+    arr
+end
 
 
 end
