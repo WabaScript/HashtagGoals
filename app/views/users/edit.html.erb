@@ -7,13 +7,15 @@
 <% end %>
 
 <%= form_for @user do |f| %>
-<%= f.label :name, "Name" %>
+<%= f.label :name, "Change Name" %>
 <%= f.text_field :name %>
-<%= f.label :email, "Email" %>
+<%= f.label :email, "Change Email" %>
 <%= f.text_field :email %>
-<%= f.label :password, "Password" %>
+<%= f.label :password, "Change Password" %>
 <%= f.text_field :password %>
-<%= f.label :location, "Location" %>
+<%= f.label :location, "Change Location" %>
 <%= f.text_field :location %>
 <%= f.submit %>
 <% end %>
+
+  <%=  current_user ? button_to('Go Back', current_user, method: :get) : '' %>
