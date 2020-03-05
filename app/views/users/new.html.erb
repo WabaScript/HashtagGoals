@@ -1,26 +1,40 @@
-<div class="home-video-wrapper">
-  <%= video_tag "coolbeach.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
 
-<h1 class="welcome-class" Welcome, Sign Up New User!>
+<div class="goal-video-wrapper">
+  <%= video_tag random_glow_video, autoplay: :autoplay, loop: :loop, mute: :mute, class: "goal_video" %>
 
-<% if flash[:errors] %>
-<% flash[:errors].each do |e| %>
-<%= e %>
-<% end %>
-<% end %>
+<!-- <div class="backg"> -->
+  <div class="center-div-edit">
+        <h1>Welcome to Edit a User page!</h1>
 
-<%= form_for @user do |f| %>
-<%= f.label :name, "Name" %>
-<%= f.text_field :name %>
-<%= f.label :email, "Email" %>
-<%= f.text_field :email %>
-<%= f.label :password, "Password" %>
-<%= f.password_field :password %>
-<%= f.label :location, "Location" %>
-<%= f.text_field :location %>
-<%= f.submit %>
-<% end %>
+        <% if flash[:errors] %>
+        <% flash[:errors].each do |e| %>
+        <%= e %>
+        <% end %>
+        <% end %>
 
- <%= button_to 'Home', login_path %>
+        <%= form_for @user do |f| %>
+        <div>
+          <%= f.label :name, "Change Name" %>
+          <%= f.text_field :name %>
+        </div>
+        
+        <div>
+          <%= f.label :email, "Change Email" %>
+          <%= f.text_field :email %>
+        </div>
+        
+        <div>
+          <%= f.label :password, "Change Password" %>
+          <%= f.text_field :password %>
+        </div>
+      <div>
+        <%= f.label :location, "Change Location" %>
+        <%= f.text_field :location %>
+      </div>
+       
+        <%= f.submit %>
+        <% end %>
 
- </div>
+          <%=  current_user ? button_to('Go Back', current_user, method: :get) : '' %>
+  </div>
+<!-- </div> -->
