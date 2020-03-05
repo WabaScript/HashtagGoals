@@ -1,33 +1,36 @@
+
 <div class="goal-video-wrapper">
   <%= video_tag random_glow_video, autoplay: :autoplay, loop: :loop, mute: :mute, class: "goal_video" %>
 
-<h1> <%=@user.name%></h1>
+<div class="backg">
+      <div class="center-div">
+        <h1> <%=@user.name%></h1>
 
-<% if flash[:success] %>
-    <h2> <%= flash[:success] %> </h2>
-<% end %>
-
-<p> Name : <%= @user.name %> 
-<p> Email : <%= @user.email %> <br>
-<p> Location : <%= @user.location %> <br>
-
-
-<h1>My Owned Goals</h1>
-<p><% @goals.each do |g| %>
-<%= link_to g.title, g %><br>
-<% end %>
-
-<h3>Goals I'm Following</h3>
-<p><% @followed_goals.each do |g| %>
-<%= link_to g.title, g %><br>
-<% end %>
-
-<% if current_user == @user %>
-  <%= button_to 'Delete this Account', user_path(@user), method: :delete, data: { confirm: 'are u sure lol' } %>
-<% end %>
-
-<% if current_user == @user %>
-  <%= button_to 'Edit Profile', edit_user_path(@user), method: :get %>
-<% end %>
-
+        <% if flash[:success] %>
+            <h2> <%= flash[:success] %> </h2>
+        <% end %>
+        
+        <p> Name : <%= @user.name %> 
+        <p> Email : <%= @user.email %> <br>
+        <p> Location : <%= @user.location %> <br>
+        
+        
+        <h1>My Owned Goals</h1>
+        <p><% @goals.each do |g| %>
+        <%= link_to g.title, g %><br>
+        <% end %>
+        
+        <h3>Goals I'm Following</h3>
+        <p><% @followed_goals.each do |g| %>
+        <%= link_to g.title, g %><br>
+        <% end %>
+        
+        <% if current_user == @user %>
+          <%= button_to 'Delete this Account', user_path(@user), method: :delete, data: { confirm: 'are u sure lol' } %>
+        <% end %>
+        
+        <% if current_user == @user %>
+          <%= button_to 'Edit Profile', edit_user_path(@user), method: :get %>
+        <% end %>
+      </div>
 </div>

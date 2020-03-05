@@ -1,26 +1,39 @@
+
 <div class="goal-video-wrapper">
   <%= video_tag random_poly_video, autoplay: :autoplay, loop: :loop, mute: :mute, class: "goal_video" %>
 
-<h1>Create A Goal</h1>
-
-<% if flash[:errors] %>
-<% flash[:errors].each do |e| %>
-<%= e %>
-<% end %>
-<% end %>
-
-<%= form_for @goal do |f| %>
-<%= f.hidden_field :owner_id, value: current_user.id %>
-<%= f.label :title, "Title" %>
-<%= f.text_field :title %>
-<%= f.label :description, "Description" %>
-<%= f.text_area :description %>
-<%= f.label :start_date, "Start Date" %>
-<%= f.text_field :start_date, data:{ provide:'datepicker' } %>
-<%= f.label :end_date, "End Date" %>
-<%= f.text_field :end_date, data:{ provide:'datepicker' } %>
-
-<%= f.submit %>
-<% end %>
-
-</div>
+<div class="backg">
+    <div class="center-div">
+            <h1>Create A Goal</h1>
+            <% if flash[:errors] %>
+            <% flash[:errors].each do |e| %>
+            <%= e %>
+            <% end %>
+            <% end %>
+            <%= form_for @goal do |f| %>
+            <%= f.hidden_field :owner_id, value: current_user.id %>
+        <div>
+            <%= f.label :title, "Title            :" %>
+            <%= f.text_field :title %>
+        </div>
+                    
+        <div>
+            <%= f.label :description, "Description" %>
+            <%= f.text_area :description %>
+        </div>
+                
+        <div>
+            <%= f.label :start_date, "Start Date" %>
+            <%= f.text_field :start_date, data:{ provide:'datepicker' } %>
+        </div>
+        <div>
+            <%= f.label :end_date, "End Date" %>
+            <%= f.text_field :end_date, data:{ provide:'datepicker' } %>
+        </div>
+                    
+        <div>
+            <%= f.submit %>
+        </div> 
+            
+            <% end %>
+    </div>
