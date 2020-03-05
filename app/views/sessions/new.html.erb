@@ -5,22 +5,19 @@
         <div class="login-div">
           <h4><%= flash[:notice] %></h4>
           <%= form_tag(login_path) do %>
+
+            <%= label_tag :name %>
+            <%= text_field_tag :name %>
           
-              <%= label_tag :name %>
-              <%= text_field_tag :name %>
-          
-              <%= label_tag :password %>
-              <%= password_field_tag :password %>
-            
-              <div>
-                <%= submit_tag 'Login' %> <br>
-              </div>
+            <%= label_tag :password %>
+            <%= password_field_tag :password %>
+        
+            <%= submit_tag 'Login' %> <br>
+         
           <% end %> 
           <h3>New User, <%= link_to "please register", new_user_path %> </h3>
 
         </div>
 
       </div>
-
-
 </div>
