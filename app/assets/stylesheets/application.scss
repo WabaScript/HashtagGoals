@@ -84,10 +84,22 @@
    .center-div{
     position: fixed; /* or absolute */
     height: 80%;
-    width: 80%;
+    width: 40%;
+    left: 30%;
     background-color: wheat;
-    padding: 10%;
-    margin: 5%;
+    padding-left: 7%;
+    padding-top: 5%;
+    // margin: 5%;
+   }
+   .center-div-edit{
+    position: fixed; /* or absolute */
+    height: 50%;
+    width: 60%;
+    left: 30%;
+    background-color: wheat;
+    padding-left: 7%;
+    padding-top: 5%;
+    // margin: 5%;
    }
    
    .backg{
