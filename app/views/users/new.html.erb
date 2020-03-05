@@ -1,5 +1,7 @@
+<div class="home-video-wrapper">
+  <%= video_tag "coolbeach.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
 
-<h1>Welcome, Sign Up New User!</h1>
+<h1 class="welcome-class" Welcome, Sign Up New User!>
 
 <% if flash[:errors] %>
 <% flash[:errors].each do |e| %>
@@ -20,3 +22,5 @@
 <% end %>
 
  <%= button_to 'Home', login_path %>
+
+ </div>

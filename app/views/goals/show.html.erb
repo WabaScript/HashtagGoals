@@ -1,3 +1,6 @@
+<div class="goal-video-wrapper">
+  <%= video_tag "GlowingFall.webm", autoplay: :autoplay, loop: :loop, mute: :mute, class: "goal_video" %>
+
 <h1><%= @goal.title %> </h1>
 <%= link_to  @owner.name, @owner %>
 
@@ -35,3 +38,4 @@
 <% end %>
 
 
+</div>
