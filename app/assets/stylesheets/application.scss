@@ -56,8 +56,7 @@
 
     nav{
     background-color: purple;
-    position: fixed;
-    top: 0;
+    overflow: auto;
     width: 100%;
     }   
     
@@ -101,10 +100,11 @@
     width: 60%;
     left: 30%;
     background-color: wheat;
-    opacity: 0.85;
+    opacity: 0.65;
     padding-left: 7%;
     padding-top: 5%;
     }   
+
    
     
     .backg{
