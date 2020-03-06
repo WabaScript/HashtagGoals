@@ -6,7 +6,7 @@
     <%= link_to  @owner.name, @owner %>
     
     <p> Description:<%= @goal.description %>
-    <p> Start Date:<%= @goal.start_date %> 
+    <p> Start Date: <%= @goal.start_date %> 
     <p> End Date: <%= @goal.end_date %>
     <br>
     <h3>Posts Section:</h3>
@@ -29,7 +29,7 @@
     <% end %>
     <% end %>
     
-    <% if @goal.follow_to_post_arr.include? (current_user.id) %>
+    <% if @goal.follow_to_post_arr.include? (current_user.id) || @goal.owner_id == current_user.id %>
     <%= form_for @post do |f| %>
     <%= f.hidden_field :goal_id, value: @goal.id %>
     <%= f.hidden_field :user_id, value: current_user.id %>
