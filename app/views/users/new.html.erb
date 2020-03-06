@@ -4,7 +4,7 @@
 
 <!-- <div class="backg"> -->
   <div class="center-div-edit">
-        <h1>Welcome to Edit a User page!</h1>
+        <h1>Ready to Achieve Greatness?<br>Sign Up Now!</h1>
 
         <% if flash[:errors] %>
         <% flash[:errors].each do |e| %>
@@ -14,27 +14,27 @@
 
         <%= form_for @user do |f| %>
         <div>
-          <%= f.label :name, "Change Name" %>
+          <%= f.label :name, "Name" %>
           <%= f.text_field :name %>
         </div>
         
         <div>
-          <%= f.label :email, "Change Email" %>
+          <%= f.label :email, "Email" %>
           <%= f.text_field :email %>
         </div>
         
         <div>
-          <%= f.label :password, "Change Password" %>
+          <%= f.label :password, "Password" %>
           <%= f.text_field :password %>
         </div>
       <div>
-        <%= f.label :location, "Change Location" %>
+        <%= f.label :location, "Location" %>
         <%= f.text_field :location %>
       </div>
        
         <%= f.submit %>
         <% end %>
-
-          <%=  current_user ? button_to('Go Back', current_user, method: :get) : '' %>
+          <%= button_to 'Go Back', login_path %>
+          <%=  current_user ? button_to('Go Home', current_user, method: :get) : '' %>
   </div>
 <!-- </div> -->
