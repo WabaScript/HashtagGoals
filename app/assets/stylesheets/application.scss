@@ -17,64 +17,63 @@
  // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";  
 
-.home_video {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    object-fit: cover;
-    top: 0;
-    z-index: -2;
+    .home_video {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        z-index: -2;
     
-   }
+    }
    
    
    .home-video-wrapper {
-   background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
    }
 
    .goal_video {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    object-fit: cover;
-    top: 0;
-    z-index: -2;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        z-index: -2;
    }
    
    
    .goal-video-wrapper {
-   background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
    }
 
    .welcome-class {
-       
        color: cyan;
    }
+
    nav{
        background-color: purple;
    }
    
    .login{
-    font-size: 1.2em;
-    font-weight: bold;
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 100%;
-    height: 100%;
+        font-size: 1.2em;
+        font-weight: bold;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 100%;
+        height: 100%;
+    }
 
-
-   }
    .login-div{
-    position: absolute;
-    top: 40%;
-    left: 5%;
-    width: 100%;
-    height: 100%;
+        position: absolute;
+        top: 40%;
+        left: 5%;
+        width: 100%;
+        height: 100%;
    }
 
    .login-name-label{
@@ -82,37 +81,37 @@
    }
 
    .center-div{
-    position: fixed; /* or absolute */
-    height: 80%;
-    width: 40%;
-    left: 30%;
-    background-color: wheat;
-    padding-left: 5%;
-    padding-right: 3%;
-    padding-top: 5%;
-    overflow: auto;
+        position: fixed; /* or absolute */
+        height: 80%;
+        width: 40%;
+        left: 30%;
+        background-color: wheat;
+        padding-left: 5%;
+        padding-right: 3%;
+        padding-top: 5%;
+        overflow: auto;
    }
    .center-div-edit{
-    position: fixed; /* or absolute */
-    height: 50%;
-    width: 60%;
-    left: 30%;
-    background-color: wheat;
-    padding-left: 7%;
-    padding-top: 5%;
-    // margin: 5%;
+        position: fixed; /* or absolute */
+        height: 50%;
+        width: 60%;
+        left: 30%;
+        background-color: wheat;
+        padding-left: 7%;
+        padding-top: 5%;
    }
    
    .backg{
-    // background: image-url('unsplash.jpg') no-repeat;
-    width: 100%;
-    height: 100%;
-    height: 100vh;
+        // background: image-url('unsplash.jpg') no-repeat;
+        width: 100%;
+        height: 100%;
+        height: 100vh;
    }
    .goal-container {
-    width:100%;
-    text-align:center;
-}
+        width:100%;
+        text-align:center;
+    }
+
    .goal-div{
        width: 30%;
        height: 120px;
@@ -144,10 +143,10 @@
        
     }
    a:hover{
-    color: #6ab04c;
-    text-transform: uppercase;
-    width: 50%;
-    animation: text 15s 1;
+        color: #6ab04c;
+        text-transform: uppercase;
+        width: 50%;
+        animation: text 15s 1;
     }
 
     @keyframes text{
@@ -165,6 +164,14 @@
         }
 
     }
-   
+
+    .btn{
+        background-image:none;
+        background-color: goldenrod;
+    }
+    .btn:hover{
+        background-image:none;
+        background-color:#ff00ff;
+    }
 
 
