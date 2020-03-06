@@ -15,163 +15,170 @@
  *= bootstrap-datepicker
  */
  // Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "bootstrap";  
-
+ @import "bootstrap";      
+ 
     .home_video {
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        object-fit: cover;
-        top: 0;
-        z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    z-index: -2;    
+    }   
     
-    }
-   
-   
-   .home-video-wrapper {
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-   }
-
-   .goal_video {
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        object-fit: cover;
-        top: 0;
-        z-index: -2;
-   }
-   
-   
-   .goal-video-wrapper {
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-   }
-
-   .welcome-class {
-       color: cyan;
-   }
-
-   nav{
-       background-color: purple;
-   }
-   
-   .login{
-        font-size: 1.2em;
-        font-weight: bold;
-        position: absolute;
-        top: 5%;
-        left: 5%;
-        width: 100%;
-        height: 100%;
-    }
-
-   .login-div{
-        position: absolute;
-        top: 40%;
-        left: 5%;
-        width: 100%;
-        height: 100%;
-   }
-
-   .login-name-label{
-       right: 400px;
-   }
-
-   .center-div{
-        position: fixed; /* or absolute */
-        height: 80%;
-        width: 40%;
-        left: 30%;
-        background-color: wheat;
-        padding-left: 5%;
-        padding-right: 3%;
-        padding-top: 5%;
-        overflow: auto;
-   }
-   .center-div-edit{
-        position: fixed; /* or absolute */
-        height: 50%;
-        width: 60%;
-        left: 30%;
-        background-color: wheat;
-        padding-left: 7%;
-        padding-top: 5%;
-   }
-   
-   .backg{
-        // background: image-url('unsplash.jpg') no-repeat;
-        width: 100%;
-        height: 100%;
-        height: 100vh;
-   }
-   .goal-container {
-        width:100%;
-        text-align:center;
-    }
-
-   .goal-div{
-       width: 30%;
-       height: 120px;
-       float:left; /* add this */
-       overflow: auto;
-       border: 1px solid red;
-       background-color: blue($color: #000000);
-       color: green;
-       margin: 20px;
-        font-size: 1.5em;
-       border-width: 5px;
-   }
-
-   .fixe-div{
-        display: inline-block;
-        margin:0 aut;
-        width: 80%;
-   }
-
-   a{
-       font-weight: 600;
-       color: blueviolet;
-       
+    .home-video-wrapper {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;   
+    }   
     
+    .goal_video {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    z-index: -2;
+    }   
+    
+    .goal-video-wrapper {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: auto;  
+    height: 100vh;   
+    }   
+    
+    .welcome-class {
+   color: cyan;
     }
+//    nav bar 
+
+    nav{
+    background-color: purple;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    }   
+    
+    .login{
+    font-size: 1.2em;
+    font-weight: bold;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 100%;
+    height: 100%;
+    }   
+    
+    .login-div{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    width: 100%;
+    height: 100%;
+    }   
+    
+    .login-name-label{
+   right: 400px;
+    }   
+    
+    .center-div{
+    position: fixed; /* or absolute */
+    height: 80%;
+    width: 40%;
+    left: 30%;
+    background-color: wheat;
+    padding-left: 5%;
+    padding-right: 3%;
+    padding-top: 5%;
+    overflow: auto;
+    }
+
+    .center-div-edit{
+    position: fixed; /* or absolute */
+    min-height: 50%;
+    width: 60%;
+    left: 30%;
+    background-color: wheat;
+    opacity: 0.85;
+    padding-left: 7%;
+    padding-top: 5%;
+    }   
+   
+    
+    .backg{
+    // background: image-url('unsplash.jpg') no-repeat;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    }
+    .goal-container {
+    width:100%;
+    text-align:center;
+    // position: fixed;
+    overflow: auto;        
+    // display: flex;
+    // flex-direction: column;
+    // min-height: 100vh;
+    }   
+    
+    .goal-div{
+   width: 30%;
+   height: 120px;
+   float:left; /* add this */
+   overflow: auto;
+   border: 1px solid red;
+   background-color: blue($color: #000000);
+   color: green;
+   margin: 20px;
+    font-size: 1.5em;
+   border-width: 5px;
+    }   
+    
+    .fixe-div{
+    display: inline-block;
+    margin:0 aut;
+    width: 80%;
+    }   
+    
+    a{
+   font-weight: 600;
+   color: blueviolet;    
+    }
+
     a:after{
-       -webkit-transition: 5s;
-       transition: 5s;
-       
+   -webkit-transition: 5s;
+   transition: 5s;    
     }
-   a:hover{
-        color: #6ab04c;
-        text-transform: uppercase;
-        width: 50%;
-        animation: text 15s 1;
-    }
-
+    a:hover{
+    color: #6ab04c;
+    text-transform: uppercase;
+    width: 50%;
+    animation: text 15s 1;
+    }    
+    
     @keyframes text{
         0%{
-            color: #6ab04c;
-            margin-bottom: -40px;
-        }
+        color: #6ab04c;
+        margin-bottom: -40px;
+            }
         30%{
-            letter-spacing: 2px;
-            margin-bottom: -40px;
-        }
+        letter-spacing: 2px;
+        margin-bottom: -40px;
+            }
         85%{
-            letter-spacing: 2px;
-            margin-bottom: -40px;
-        }
-
-    }
-
+        letter-spacing: 2px;
+        margin-bottom: -40px;
+            }    
+        }    
+    
     .btn{
-        background-image:none;
-        background-color: goldenrod;
+    background-image:none;
+    background-color: goldenrod;
     }
+
     .btn:hover{
-        background-image:none;
-        background-color:#ff00ff;
+    background-image:none;
+    background-color:#ff00ff;
     }
-
-
