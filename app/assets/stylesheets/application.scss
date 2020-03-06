@@ -135,6 +135,36 @@
    a{
        font-weight: 600;
        color: blueviolet;
-   }
+       
+    
+    }
+    a:after{
+       -webkit-transition: 5s;
+       transition: 5s;
+       
+    }
+   a:hover{
+    color: #6ab04c;
+    text-transform: uppercase;
+    width: 50%;
+    animation: text 15s 1;
+    }
+
+    @keyframes text{
+        0%{
+            color: #6ab04c;
+            margin-bottom: -40px;
+        }
+        30%{
+            letter-spacing: 2px;
+            margin-bottom: -40px;
+        }
+        85%{
+            letter-spacing: 2px;
+            margin-bottom: -40px;
+        }
+
+    }
+   
 
 
