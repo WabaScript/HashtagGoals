@@ -17,7 +17,7 @@
   </head>
 
   <body>
-   <nav class="nav nav-pills mb-3">
+   <nav class="navbar navbar-light bg-light">
       <div class="nav-item">
         <%=  current_user ? button_to('logout', logout_path, method: :delete, class: "nav-item nav-link active") : '' %>
       </div>
@@ -29,7 +29,6 @@
       <div class="nav-item">
         <%=  current_user ? button_to('Profile', current_user, method: :get, class: "nav-item nav-link active") : '' %>
       </div>
-
     </nav>
     <%= yield %>
   </body>
