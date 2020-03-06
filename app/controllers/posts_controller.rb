@@ -47,10 +47,11 @@ class PostsController < ApplicationController
   
     end 
     
+
     def destroy 
-      # @post = Post.find(params[:id])
+      @goal = params[:goal_id]
       @post.destroy 
-      redirect_to goals_path
+      redirect_to goal_path(@goal)
     end 
   
     private 
