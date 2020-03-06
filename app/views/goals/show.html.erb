@@ -14,7 +14,7 @@
     <%= link_to  p.user.name, p.user %>: <%= p.content %>
     <%= image_tag "#{p.img_url}" %><br>
     <% if current_user.id == p.user_id %>
-      <%= button_to 'Delete this comment', post_path(p), method: :delete, data: { confirm: 'are u sure lol' } %>
+      <%= button_to 'Delete this comment', post_path(p), method: :delete, params: {goal_id: p.goal_id}, data: { confirm: 'are u sure lol' } %>
       
     <% end %>
         <% end %>
