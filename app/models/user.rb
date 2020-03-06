@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :goals, foreign_key: :owner_id
 
   validates :name, :password, :email, :location, presence: true
-  validates :password, length: { in: 6..20 }
+  validates :password, length: { in: 2..20 }
   validates :email, :name, uniqueness: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP } 
     
