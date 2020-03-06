@@ -186,3 +186,16 @@
     background-image:none;
     background-color:#ff00ff;
     }
+
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        left: 40%;
+        width: 150px ;
+        height: 25px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        opacity: 0.2;
+     }
