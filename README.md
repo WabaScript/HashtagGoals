@@ -1,4 +1,4 @@
-HashtagGoals - Github | Demo
+HashtagGoals 
 HashtagGoal is a sharing goals app where users can sign in, post a goal they want to achieve or follow someone else's goal. The app front-end and back-end was built with Ruby and Rails.
 Utilized bcript password hashing to store encrypted user information (back-end).
 Login/logout ensures user identity so users can follow each other.
