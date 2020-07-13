@@ -97,19 +97,24 @@
     }
 
     .center-div-edit{
-    position: fixed; /* or absolute */
+    position: fixed; 
     min-height: 50%;
     max-width: 60%;
     left: 30%;
-    background-color: wheat;
+    background-color: rgba(245, 222, 179, 0.653);
     opacity: 0.85;
+    border-radius: 20px;
     // padding-left: 5%;
     // padding-right: 3%;
     top: 25%;
     padding: 5%;
     }   
 
-   
+   .new-user-header-text{
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        position: center;
+   }
     
     .backg{
     // background: image-url('unsplash.jpg') no-repeat;
