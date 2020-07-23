@@ -1,0 +1,118 @@
+ul {
+    list-style-type: none;
+    margin: auto;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+  
+li a {
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.nav-header-container {
+    display: inline;
+}
+
+.nav-header {
+
+}
+
+.nav-item {
+    margin: 15px;
+    padding: 5px;
+}
+
+.home_video {
+width: 100vw;
+height: 100vh;
+position: absolute;
+object-fit: cover;
+top: 0;
+z-index: -2;    
+}   
+
+.home-video-wrapper {
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;   
+}   
+
+.goal_video {
+width: 100vw;
+height: 100vh;
+position: absolute;
+object-fit: cover;
+top: 0;
+z-index: -2;
+}   
+
+.goal-video-wrapper {
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+overflow: auto;  
+}   
+
+.myButton {
+    margin: 7px;
+    box-shadow: 0px 10px 14px -7px #276873;
+    background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+    background-color:#599bb3;
+    border-radius:8px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:20px;
+    font-weight:bold;
+    padding:13px 32px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+    background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+    background-color:#408c99;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+.buttonWW {
+	box-shadow: 0px 10px 14px -7px #9fb4f2;
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	background-color:#7892c2;
+	border-radius:4px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #283966;
+    float: left;
+    margin-right: 20px;
+}
+.buttonWW:hover {
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	background-color:#476e9e;
+}
+.buttonWW:active {
+	position:relative;
+	top:1px;
+}
+
+.buttonWW-group {
+    margin-left: 20px;
+}
+        
+
+  
