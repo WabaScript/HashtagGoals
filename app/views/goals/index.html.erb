@@ -1,7 +1,10 @@
 <div class="goal-video-wrapper">
   <%= video_tag random_poly_video, autoplay: :autoplay, loop: :loop, mute: :mute, class: "goal_video" %>
 
-  <h1>Goals</h1>
+</div>
+  <div class="goals-header-container">
+  <h1>GOALS</h1>
+  </div>
   <div class="goal-container">
     <% @goals.each do |g| %>
 
