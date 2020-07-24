@@ -14,7 +14,7 @@
     <%= link_to  p.user.name, p.user %>: <%= p.content %>
     <%= image_tag "#{p.img_url}" %><br>
     <% if current_user.id == p.user_id %>
-      <%= button_to 'Delete this comment', post_path(p), method: :delete, params: {goal_id: p.goal_id}, data: { confirm: 'are u sure lol' } %>
+      <%= button_to 'Delete comment', post_path(p), method: :delete, params: {goal_id: p.goal_id}, data: { confirm: 'are u sure lol' } %>
       
     <% end %>
         <% end %>
@@ -38,13 +38,13 @@
     <%= f.text_field :content %>
     <%= f.label :img_url, "image url:" %>
     <%= f.text_field :img_url %>
-    <%= f.submit "Create Post"%>
+    <%= f.submit "Create Post", class: "buttonWW"%>
     <% end %>
     <% end %>
 
     
     <% if current_user == @owner %>
-      <%= button_to 'Edit Goal', edit_goal_path(@goal), method: :get , class: "btn" %>
+      <%= button_to 'Edit Goal', edit_goal_path(@goal), method: :get , class: "buttonWW" %>
     <% end %>
 
 </div>
