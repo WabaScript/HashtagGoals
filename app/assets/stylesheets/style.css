@@ -1,3 +1,37 @@
+.home_video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2; 
+}   
+
+.home-video-wrapper {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: auto; 
+}   
+
+.goal_video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}   
+
+.goal-video-wrapper {
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+overflow: auto;  
+}   
+
 ul {
     list-style-type: none;
     margin: auto;
@@ -13,6 +47,24 @@ li a {
     text-align: center;
     padding: 16px;
     text-decoration: none;
+}
+
+.login {
+    margin: auto;
+    width: 30%;
+    border: 2px solid rgb(109, 184, 192, 0.6);
+    border-radius: 6px;
+    background-color: rgba(100, 100, 100, 0.75);
+    padding: 20px;
+    margin-top: 18%;
+    margin-right: 60%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.login-div {
+    display: inline-block;
+  justify-content: space-between;
+  padding: 10px 0;
 }
 
 .goals-header-container {
@@ -57,36 +109,6 @@ li a {
     padding: 5px;
 }
 
-.home_video {
-width: 100vw;
-height: 100vh;
-position: absolute;
-object-fit: cover;
-top: 0;
-z-index: -2;    
-}   
-
-.home-video-wrapper {
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-position: center;   
-}   
-
-.goal_video {
-width: 100vw;
-height: 100vh;
-position: absolute;
-object-fit: cover;
-top: 0;
-z-index: -2;
-}   
-
-.goal-video-wrapper {
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-position: center;
-overflow: auto;  
-}   
 
 .myButton {
     margin: 7px;
