@@ -6,4 +6,4 @@ Post goal - using a RESTful route gives the user the ability to post a goal.
 Follow goals - using Active record models relationships allow users to follow each other.
 
 ## Checkout the beta *Web Only!
-https://young-beyond-38253.herokuapp.com/
+https://the-goals-app.herokuapp.com/
