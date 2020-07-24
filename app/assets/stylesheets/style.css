@@ -72,6 +72,8 @@ li a {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    position: relative;
+    height: 70px;
 }
 
 .goals-header-container h1 {
@@ -169,6 +171,7 @@ li a {
     display: flex;                    
     flex-wrap: wrap; 
     justify-content: center;
+    margin-top: 70px;
 }
 
 .fancy {
@@ -177,10 +180,10 @@ li a {
     justify-content: center;
     text-align: center;
     box-sizing: border-box;
-    width     : 200px;
-    height    : 200px;
-    padding   : 40px 1em 0 1em;
-    margin    : 0 100px;
+    width: 200px;
+    height: 200px;
+    padding: 40px 1em 0 1em;
+    margin: 15px 100px;
     position: relative;
     background-color: #A4C9CF;
     border-radius: 70% 50% 50% 50%;

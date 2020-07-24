@@ -30,9 +30,9 @@
         <%= f.text_field :location %>
       </div>
        
-        <%= f.submit %>
+        <%= f.submit class: "buttonWW"  %>
         <% end %>
-          <%= button_to 'Go Back', login_path %>
+          <%= button_to 'Go Back', login_path, class: "buttonWW" %>
           <%=  current_user ? button_to('Go Home', current_user, method: :get) : '' %>
       </div>
   </div>
