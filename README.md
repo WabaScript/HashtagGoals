@@ -4,3 +4,6 @@ Utilized bcript password hashing to store encrypted user information (back-end).
 Login/logout ensures user identity so users can follow each other.
 Post goal - using a RESTful route gives the user the ability to post a goal.
 Follow goals - using Active record models relationships allow users to follow each other.
+
+## Checkout the beta *Web Only!
+https://young-beyond-38253.herokuapp.com/goals?
