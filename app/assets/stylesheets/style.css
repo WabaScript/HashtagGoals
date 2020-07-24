@@ -166,21 +166,15 @@ li a {
 }
         
 .goal-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: baseline;
-    align-content: stretch;
-}
-
-.goal-div {
-    padding: 10px;
-	margin-bottom: 15px;
-	border-radius: 5px;
+    display: flex;                    
+    flex-wrap: wrap; 
+    justify-content: center;
 }
 
 .fancy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     box-sizing: border-box;
     width     : 200px;
@@ -189,5 +183,27 @@ li a {
     margin    : 0 100px;
     position: relative;
     background-color: #A4C9CF;
-    border-radius: 100% 50% 50% 50%;
+    border-radius: 70% 50% 50% 50%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .fancy:nth-child(odd) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    width     : 200px;
+    height    : 200px;
+    padding   : 40px 1em 0 1em;
+    margin    : 0 100px;
+    position: relative;
+    background-color: #d6a144;
+    border-radius: 70% 50% 50% 50%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .inner-text {
+    text-align: center;
+    color: black;
   }
