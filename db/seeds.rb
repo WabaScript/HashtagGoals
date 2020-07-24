@@ -20,7 +20,7 @@ Post.destroy_all
       email: Faker::Internet.free_email,
       password: Faker::Number.number(digits: 6).to_s
     })
-  end
+end
   
 #   def date
 #     random_year = Random.new.rand(2019..2020)
@@ -29,13 +29,39 @@ Post.destroy_all
 #     return "#{Date.new(random_day,random_month,random_year)}"
 #     end
   
-  5.times do
-    Goal.create({
-      title: Faker::GreekPhilosophers.quote,
-      owner_id: rand(1..10),
-      description: Faker::Hipster.paragraph_by_chars(characters: 300, supplemental: false)
-    })
-    end
+  # 5.times do
+  #   Goal.create({
+  #     title: Faker::GreekPhilosophers.quote,
+  #     owner_id: rand(1..10),
+  #     description: Faker::Hipster.paragraph_by_chars(characters: 300, supplemental: false)
+  #   })
+  #   end
+
+goal1 = Goal.create({
+          title: "Losing 20 Pounds for the Summer",
+          owner_id: rand(1..10),
+          description: "I have been eating too much ice cream and it's time I finally cut down. I plan on working out every day and changing my diet. I am excited!"
+        })
+goal2 = Goal.create({
+          title: "Quit Smoking",
+          owner_id: rand(1..10),
+          description: "A dumb habit I picked up in my late teens, and I'm finally ready to get rid of it! Anybody try going cold turkey?"
+        })
+goal3 = Goal.create({
+          title: "Read More Books",
+          owner_id: rand(1..10),
+          description: "I'm tired of social media and nonsense. Sometimes it feels good to escape to a nice book. I plan to read a new book every two weeks!"
+        })
+goal4 = Goal.create({
+          title: "Stop Biting My Nails",
+          owner_id: rand(1..10),
+          description: "It's gross! I know! Yet I still do it! Gotta stop this."
+        })
+goal5 = Goal.create({
+          title: "Get a Girlfriend",
+          owner_id: rand(1..10),
+          description: "My Mom has been nagging me to get my life together, so I think its time I shave, get a haircut, and do something productive with my life. Anyone know where to meet some ladies!?"
+        })
 
     5.times do
         FollowGoal.create({
