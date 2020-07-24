@@ -1,27 +1,25 @@
-
 <div class="goal-video-wrapper">
   <%= video_tag random_poly_video, autoplay: :autoplay, loop: :loop, mute: :mute, class: "goal_video" %>
 
 <div class="backg">
     <div class="center-div">
             <h1>Create A Goal</h1>
+
             <% if flash[:errors] %>
-            <% flash[:errors].each do |e| %>
-            <%= e %>
-            <% end %>
+                <% flash[:errors].each do |e| %>
+                    <%= e %>
+                <% end %>
             <% end %>
             <%= form_for @goal do |f| %>
             <%= f.hidden_field :owner_id, value: current_user.id %>
         <div>
-            <%= f.label :title, "Title            :" %>
+            <%= f.label :title, "Title:" %>
             <%= f.text_field :title %>
-        </div>
-                    
+        </div>   
         <div>
             <%= f.label :description, "Description" %>
             <%= f.text_area :description %>
-        </div>
-                
+        </div>      
         <div>
             <%= f.label :start_date, "Start Date" %>
             <%# <%= f.text_field :start_date, data:{ provide:'datepicker' } %> 
@@ -30,11 +28,10 @@
         <div>
             <%= f.label :end_date, "End Date" %>
             <%= f.date_field :end_date %>
-        </div>
-                    
+        </div>        
         <div>
             <%= f.submit %>
-        </div> 
-            
-            <% end %>
-    </div>
+        </div>
+        <% end %>
+</div>
+
