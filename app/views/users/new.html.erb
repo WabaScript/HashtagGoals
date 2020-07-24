@@ -2,9 +2,9 @@
   <%= video_tag "coolbeach.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
 
 
-  <div class="center-div-edit">
-  
-        <h1>Ready to Achieve Greatness?<br>Sign Up Now!</h1>
+  <div class="login">
+    <div class="login-div">
+        <h2>Sign Up Now!</h2>
 
         <% if flash[:errors] %>
         <% flash[:errors].each do |e| %>
@@ -35,5 +35,5 @@
         <% end %>
           <%= button_to 'Go Back', login_path %>
           <%=  current_user ? button_to('Go Home', current_user, method: :get) : '' %>
+      </div>
   </div>
-<!-- </div> -->

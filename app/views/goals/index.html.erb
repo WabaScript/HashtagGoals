@@ -1,21 +1,22 @@
 <div class="goal-video-wrapper">
   <%= video_tag random_poly_video, autoplay: :autoplay, loop: :loop, mute: :mute, class: "goal_video" %>
 
-  <h1>Goals</h1>
+</div>
+  <div class="goals-header-container">
+    <h1>GOALS</h1>
+  </div>
+    <div class="fixe-div">
+      <%= button_to('Create a Goal!', new_goal_path, class: "btn", method: :get ) %>
+    </div>
   <div class="goal-container">
     <% @goals.each do |g| %>
 
-        <div class="goal-div">
-          <%= link_to  g.title, g %><br/>
+        <div class="fancy">
+          <%= link_to  g.title, g, class: "inner-text" %><br/>
         </div>
 
       <% end %>
 
   </div>
-    
 
-
-<div class="fixe-div">
-  <%= button_to('Create a Goal!', new_goal_path, class: "btn", method: :get ) %>
-</div>
 </div>
