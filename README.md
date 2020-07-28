@@ -8,5 +8,5 @@ Follow goals - using Active record models relationships allow users to follow ea
 ## Checkout the beta *Web Only!
 https://the-goals-app.herokuapp.com/
 
-## Scan on your phone!
-(https://user-images.githubusercontent.com/59180399/88726874-7d417800-d0fc-11ea-952c-41b3ed5adf7c.png)
+## Scan with your phone!
+<a href="https://github.com/WabaScript/HashtagGoals"><img src="https://user-images.githubusercontent.com/59180399/88726874-7d417800-d0fc-11ea-952c-41b3ed5adf7c.png" title="Goals" alt="goal" width="20%" height="20%"></a>
