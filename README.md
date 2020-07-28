@@ -7,3 +7,6 @@ Follow goals - using Active record models relationships allow users to follow ea
 
 ## Checkout the beta *Web Only!
 https://the-goals-app.herokuapp.com/
+
+## Scan on your phone!
+(https://user-images.githubusercontent.com/59180399/88726874-7d417800-d0fc-11ea-952c-41b3ed5adf7c.png)
