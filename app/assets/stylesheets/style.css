@@ -1,5 +1,5 @@
 .home_video {
-    object-fit: cover;
+    object-fit: fill;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -14,6 +14,15 @@
     background-position: center;
     overflow: auto; 
 }   
+
+@media (min-width: 40rem) {
+    .home_video {
+        height: 100vh;
+        background-position: 50% 25%;
+        object-fit: cover;
+    }
+
+}
 
 .goal_video {
     object-fit: cover;
@@ -50,8 +59,9 @@ li a {
 }
 
 .login {
+    
     margin: auto;
-    width: 30%;
+    width: 50%;
     border: 2px solid rgb(109, 184, 192, 0.6);
     border-radius: 6px;
     background-color: rgba(100, 100, 100, 0.75);
@@ -62,9 +72,17 @@ li a {
 }
 
 .login-div {
-    display: inline-block;
+    display: block;
   justify-content: space-between;
   padding: 10px 0;
+}
+
+@media (min-width: 40rem) {
+    .login-div {
+    display: inline-block;
+    width: 20%;
+    vertical-align: middle;
+    }
 }
 
 .goals-header-container {
@@ -99,7 +117,10 @@ li a {
 }
 
 .nav-header-container {
-    display: inline;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-item {
@@ -175,13 +196,13 @@ li a {
     justify-content: center;
     text-align: center;
     box-sizing: border-box;
-    width: 200px;
+    width: 300px;
     height: 200px;
     padding: 40px 1em 0 1em;
     margin: 15px 100px;
     position: relative;
-    background-color: #A4C9CF;
-    border-radius: 70% 50% 50% 50%;
+    background-color: #dbb1ff;
+    border-radius: 25%;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   }
 
@@ -191,13 +212,13 @@ li a {
     justify-content: center;
     text-align: center;
     box-sizing: border-box;
-    width     : 200px;
-    height    : 200px;
-    padding   : 40px 1em 0 1em;
-    margin    : 0 100px;
+    width: 300px;
+    height: 200px;
+    padding: 40px 1em 0 1em;
+    margin: 0 100px;
     position: relative;
-    background-color: #d6a144;
-    border-radius: 70% 50% 50% 50%;
+    background-color: #a1d0ff;
+    border-radius: 25%;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   }
 
