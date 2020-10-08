@@ -1,8 +1,8 @@
-<div class="home-video-wrapper">
+<%# <div class="home-video-wrapper">
   <%= video_tag "coolbeach.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
 
-  <div class="login">
-    <div class="login-div">
+<div class='container'>
+    <div class="simple-box">
         <h2>Sign Up Now!</h2>
 
         <% if flash[:errors] %>
@@ -32,7 +32,9 @@
        
         <%= f.submit class: "buttonWW"  %>
         <% end %>
+          <div class='back'>
           <%= button_to 'Go Back', login_path, class: "buttonWW" %>
           <%=  current_user ? button_to('Go Home', current_user, method: :get) : '' %>
-      </div>
+          </div>
   </div>
+<%# </div> %>
