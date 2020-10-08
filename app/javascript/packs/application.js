@@ -15,3 +15,23 @@ require("bootstrap-datepicker")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+function randomizeTheme{
+    const themes = ["default-theme", "other-theme"];
+    var random = rand(2)
+    return themes[rand]
+}
+
+
+function setTheme(theme) {
+    var themes = ["blue-theme", "red-theme"];
+    for (var i=0; i < themes.length; i++) {
+
+      var styleSheet = document.getElementById(themes[i]);
+      if (themes[i] == theme) {
+        styleSheet.removeAttribute("disabled");
+      } else {
+        styleSheet.setAttribute("disabled", "disabled");
+      }      
+    }
+}

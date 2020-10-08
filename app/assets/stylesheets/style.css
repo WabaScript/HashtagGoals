@@ -1,3 +1,48 @@
+body {
+    background: rgb(243, 229, 255);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.simple-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 3px;
+    margin: 1rem;
+    height: 40%;
+    width: 30%;
+    position: relative;
+    background: rgb(76,255,86);
+    background: linear-gradient(180deg, rgba(76,255,86,1) 0%, rgb(138, 255, 95) 50%, rgba(76,255,86,1) 100%); 
+}
+
+.back {
+    display: flex;
+    justify-self: start;
+}
+
+
 .home_video {
     object-fit: fill;
     width: 100vw;
@@ -58,8 +103,12 @@ li a {
     text-decoration: none;
 }
 
-.login {
-    
+
+
+/* .login {
+    display: flex;
+    align-self: center;
+    justify-self: center;
     margin: auto;
     width: 50%;
     border: 2px solid rgb(109, 184, 192, 0.6);
@@ -72,10 +121,12 @@ li a {
 }
 
 .login-div {
-    display: block;
+    display: flex;
+    align-self: center;
+    justify-self: center;
   justify-content: space-between;
   padding: 10px 0;
-}
+} */
 
 @media (min-width: 40rem) {
     .login-div {
@@ -130,9 +181,9 @@ li a {
 
 .myButton {
     margin: 7px;
-    box-shadow: 0px 10px 14px -7px #276873;
-    background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
-    background-color:#599bb3;
+    box-shadow: 0px 10px 14px -7px rgb(31, 142, 37);
+    background:linear-gradient(to bottom, rgb(31, 142, 37) 5%, rgb(35, 255, 46) 100%);
+    background-color:rgb(31, 142, 37);
     border-radius:8px;
     display:inline-block;
     cursor:pointer;
@@ -142,11 +193,11 @@ li a {
     font-weight:bold;
     padding:13px 32px;
     text-decoration:none;
-    text-shadow:0px 1px 0px #3d768a;
+    text-shadow:0px 1px 0px #0d2313;
 }
 .myButton:hover {
-    background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
-    background-color:#408c99;
+    background:linear-gradient(to bottom, rgb(35, 255, 46) 5%,rgb(31, 142, 37) 100%);
+    background-color:rgb(35, 255, 46);
 }
 .myButton:active {
     position:relative;
@@ -154,10 +205,10 @@ li a {
 }
 .buttonWW {
 	box-shadow: 0px 10px 14px -7px #9fb4f2;
-	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
-	background-color:#7892c2;
+	background:linear-gradient(to bottom, rgb(31, 142, 37) 5%, rgb(35, 255, 46) 100%);
+	background-color:rgb(31, 142, 37);
 	border-radius:4px;
-	border:1px solid #4e6096;
+	border:1px solid rgb(35, 255, 46);
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -166,13 +217,13 @@ li a {
 	font-weight:bold;
 	padding:6px 12px;
 	text-decoration:none;
-    text-shadow:0px 1px 0px #283966;
+    text-shadow:0px 1px 0px #0d2313;
     float: left;
     margin-right: 20px;
 }
 .buttonWW:hover {
-	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
-	background-color:#476e9e;
+	background:linear-gradient(to bottom, rgb(76,255,86) 5%, rgb(35, 255, 46) 100%);
+	background-color: rgb(31, 142, 37);
 }
 .buttonWW:active {
 	position:relative;

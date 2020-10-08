@@ -1,8 +1,8 @@
 <div class="home-video-wrapper">
   <%= video_tag "PexelsVideos1550080.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
   
-      <div class="login">
-        <div class="login-div">
+      <div class="container">
+        <div class="simple-box">
           <h4><%= flash[:notice] %></h4>
           <%= form_tag(login_path) do %>
 
@@ -15,8 +15,7 @@
             <%= submit_tag 'Login', class: "buttonWW" %> <br>
          
           <% end %> 
-          <h3>New User,</h3>
-          <p><%= link_to "Please Register", new_user_path  %> </p>
+          <h3>New User?</h3><%= link_to "Please Register", new_user_path  %>
 
         </div>
       </div>
