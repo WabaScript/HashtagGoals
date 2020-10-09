@@ -1,5 +1,6 @@
 body {
-    background: rgb(243, 229, 255);
+    background: rgb(76,255,86);
+    background: linear-gradient(180deg, rgba(76,255,86,1) 0%, rgb(138, 255, 95) 50%, rgba(76,255,86,1) 100%); 
 }
 
 .container {
@@ -28,13 +29,13 @@ body {
     justify-content: center;
     flex-direction: column;
     padding: 20px;
-    border-radius: 3px;
+    border-radius: 6px;
     margin: 1rem;
     height: 40%;
     width: 30%;
     position: relative;
-    background: rgb(76,255,86);
-    background: linear-gradient(180deg, rgba(76,255,86,1) 0%, rgb(138, 255, 95) 50%, rgba(76,255,86,1) 100%); 
+    background: rgb(243, 229, 255);
+    background: radial-gradient(rgb(243, 229, 255), rgb(235, 216, 251) 130%);
 }
 
 .back {
