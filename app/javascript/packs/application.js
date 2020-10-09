@@ -16,7 +16,7 @@ require("bootstrap-datepicker")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-function randomizeTheme{
+function randomizeTheme(){
     const themes = ["default-theme", "other-theme"];
     var random = rand(2)
     return themes[rand]
