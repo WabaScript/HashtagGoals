@@ -278,3 +278,31 @@ li a {
     text-align: center;
     color: black;
   }
+
+  
+@media screen and (max-width: 500px) {
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .nav-header-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .nav-item {
+        display: flex;
+        flex-direction: row;
+        margin: 3px;
+        padding: 3px;
+        flex-wrap: wrap;
+    }
+    .myButton {
+        width: 70%;
+    }
+}
