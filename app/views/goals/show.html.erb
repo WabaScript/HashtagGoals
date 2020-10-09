@@ -1,53 +1,58 @@
-<div class="goal-video-wrapper">
-  <%= video_tag random_poly_video, autoplay: :autoplay, loop: :loop, mute: :mute, class: "goal_video" %>
+<%# <div class="goal-video-wrapper">
+  <%= video_tag random_poly_video, autoplay: :autoplay, loop: :loop, mute: :mute, class: "goal_video" %> 
 
-  <div class="center-div">
-    <h1><%= @goal.title %> </h1>
-    <%= link_to  @owner.name, @owner %>
-    
-    <p> Description:<%= @goal.description %>
-    <p> Start Date: <%= @goal.start_date %> 
-    <p> End Date: <%= @goal.end_date %>
-    <br>
-    <h3>Posts Section:</h3>
-    <p> <% @posts.each do |p| %>
-    <%= link_to  p.user.name, p.user %>: <%= p.content %>
-    <%= image_tag "#{p.img_url}" %><br>
-    <% if current_user.id == p.user_id %>
-      <%= button_to 'Delete comment', post_path(p), method: :delete, params: {goal_id: p.goal_id}, data: { confirm: 'are u sure lol' } %>
-      
-    <% end %>
+  <div class="container-user">
+    <div class="simple-box">
+        <h1><%= @goal.title %> </h1>
+        <%= link_to  @owner.name, @owner %>
+        
+        <% if (@goal.follow_to_post_arr.include? (current_user.id)) || (@goal.owner_id == current_user.id) %>
+        <% else %>
+        <%= form_for @follow_goal do |f| %>
+        <%= f.hidden_field :goal_id, value: @goal.id %>
+        <%= f.hidden_field :follower_id, value: current_user.id %>
+        <%= f.submit "Follow this goal"%>
         <% end %>
-    <p>
+    <% end %>
+    </div>
+
+    <div class="simple-box">
+        <p> Description:<%= @goal.description %>
+        <p> Start Date: <%= @goal.start_date %> 
+        <p> End Date: <%= @goal.end_date %>
+    <br>
+    </div>
+    <div class="simple-box">
+        <h3>Posts Section:</h3>
+        <p> <% @posts.each do |p| %>
+        <%= link_to  p.user.name, p.user %>: <%= p.content %>
+        <%= image_tag "#{p.img_url}" %><br>
+        <% if current_user.id == p.user_id %>
+          <%= button_to 'Delete comment', post_path(p), method: :delete, params: {goal_id: p.goal_id}, data: { confirm: 'are u sure lol' } %>
+          <% end %>
+        <% end %>
+        <p>
+      <% if (@goal.follow_to_post_arr.include? (current_user.id)) || (@goal.owner_id == current_user.id) %>
+      <%= form_for @post do |f| %>
+      <%= f.hidden_field :goal_id, value: @goal.id %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.label :content, "Write a comment:" %>
+      <%= f.text_field :content %>
+      <%= f.label :img_url, "image url:" %>
+      <%= f.text_field :img_url %>
+      <%= f.submit "Create Post", class: "buttonWW"%>
+      <% end %>
+      <% end %>
+    </div>
 
     
-    <% if (@goal.follow_to_post_arr.include? (current_user.id)) || (@goal.owner_id == current_user.id) %>
-    <% else %>
-    <%= form_for @follow_goal do |f| %>
-    <%= f.hidden_field :goal_id, value: @goal.id %>
-    <%= f.hidden_field :follower_id, value: current_user.id %>
-    <%= f.submit "Follow this goal"%>
-    <% end %>
-    <% end %>
-    
-    <% if (@goal.follow_to_post_arr.include? (current_user.id)) || (@goal.owner_id == current_user.id) %>
-    <%= form_for @post do |f| %>
-    <%= f.hidden_field :goal_id, value: @goal.id %>
-    <%= f.hidden_field :user_id, value: current_user.id %>
-    <%= f.label :content, "Write a comment:" %>
-    <%= f.text_field :content %>
-    <%= f.label :img_url, "image url:" %>
-    <%= f.text_field :img_url %>
-    <%= f.submit "Create Post", class: "buttonWW"%>
-    <% end %>
-    <% end %>
 
     
     <% if current_user == @owner %>
       <%= button_to 'Edit Goal', edit_goal_path(@goal), method: :get , class: "buttonWW" %>
     <% end %>
-
+  </div>
 </div>
 
 
-</div>
+<%# </div> %>
