@@ -21,19 +21,17 @@
     <%= stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <nav class="nav-header-container">
-      <ul class="nav-header">
-        <li class="nav-item">
+      <div class="nav-header-container">
+        <div class="nav-item">
           <%=  current_user ? button_to('Home', goals_path, method: :get, class: "myButton") : '' %>
-        </li>
-        <li class="nav-item">
+        </div>
+        <div class="nav-item">
           <%=  current_user ? button_to('Profile', current_user, method: :get, class: "myButton") : '' %>
-        </li>
-        <li class="nav-item">
+        </div>
+        <div class="nav-item">
           <%=  current_user ? button_to('Logout', logout_path, method: :delete, class: "myButton") : '' %>
-        </li>
-      </ul>
-    </nav>
+        </div>
+      </div>
     <div class="">
       <div class="">
       <%= yield %>

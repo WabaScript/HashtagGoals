@@ -182,7 +182,7 @@ li a {
 
 .myButton {
     margin: 7px;
-    box-shadow: 3px 3px 8px .08px rgb(31, 142, 37);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     background:linear-gradient(to bottom, rgb(31, 142, 37) 5%, rgb(35, 255, 46) 100%);
     background-color:rgb(31, 142, 37);
     border: .5px solid rgb(31, 142, 37);
@@ -206,7 +206,8 @@ li a {
     top:1px;
 }
 .buttonWW {
-	box-shadow: 1px 1px 4px .08px #424242;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 	background:linear-gradient(to bottom, rgb(31, 142, 37) 5%, rgb(35, 255, 46) 100%);
 	background-color:rgb(31, 142, 37);
 	border-radius:4px;
@@ -222,8 +223,9 @@ li a {
     text-shadow:0px 1px 0px #0d2313;
 }
 .buttonWW:hover {
-	background:linear-gradient(to bottom, rgb(76,255,86) 5%, rgb(35, 255, 46) 100%);
-	background-color: rgb(31, 142, 37);
+	background: linear-gradient(to bottom, rgb(76,255,86) 5%, rgb(35, 255, 46) 100%);
+    background-color: rgb(31, 142, 37);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 .buttonWW:active {
 	position:relative;
@@ -280,35 +282,30 @@ li a {
 
   
 @media screen and (max-width: 500px) {
-    ul {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        
-    }
+
     .nav-header-container {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
     }
     .nav-item {
         display: flex;
         flex-direction: row;
         margin: 3px;
         padding: 3px;
-        flex-wrap: wrap;
     }
     .buttonWW {
-        width: 30%;
+        width: 100%;
         font-size: 10px;
         text-align: center;
     }
     .myButton {
-        width: 45%;
+        width: 100%;
         font-size: 10px;
         text-align: center;
+    }
+    .simple-box {
+        width: 70%;
     }
 }
