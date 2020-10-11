@@ -308,4 +308,7 @@ li a {
     .simple-box {
         width: 70%;
     }
+    .create-button {
+        padding-top: 10%;
+    }
 }
